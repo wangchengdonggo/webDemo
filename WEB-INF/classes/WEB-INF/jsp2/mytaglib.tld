@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>myshortname</short-name>
+
+    <!--??????URL-->
+    <uri>http://mycompany.com</uri>
+
+    <tag>
+        <!--?????-->
+        <name>helloword</name>
+        <!--???????-->
+        <tag-class>com.tag.HelloTag</tag-class>
+        <!--???????-->
+        <!--empty  ???????????
+        tagdependent  ????????????????
+        scriptless  ??????????????HTML?????????????jsp??
+        JSP  ?????????????jsp??
+        -->
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <name>attribute</name>
+        <tag-class>com.tag.AttributeTag</tag-class>
+        <body-content>empty</body-content>
+
+
+        <attribute>
+            <!--配置标签属性名-->
+            <name>userName</name>
+
+            <!--设置属性是否为必须-->
+            <required>true</required>
+
+        <!--    设置属性是否支持sp脚本，表达式等动态内容-->
+            <fragment>true</fragment>
+        </attribute>
+        <attribute>
+            <name>passWord</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
+    </tag>
+</taglib>
